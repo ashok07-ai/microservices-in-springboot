@@ -1,6 +1,7 @@
 package com.stack.accounts.controller;
 
 import com.stack.accounts.constant.AccountConstant;
+import com.stack.accounts.dto.AccountsContactInfoDTO;
 import com.stack.accounts.dto.CustomerDTO;
 import com.stack.accounts.dto.ErrorResponseDTO;
 import com.stack.accounts.dto.ResponseDTO;
@@ -42,6 +43,9 @@ public class AccountController {
 
     @Autowired
     private Environment environment;
+
+    @Autowired
+    private AccountsContactInfoDTO accountsContactInfoDTO;
 
 
     @Operation(
@@ -222,4 +226,32 @@ public class AccountController {
     }
 
 
+    @Operation(
+            summary = "Get developer's contact info",
+            description = "Get the developer info in case of application issues"
+    )
+    @ApiResponses({
+            @ApiResponse(
+                    responseCode = "200",
+                    description = "HTTP Status OK"
+            ),
+            @ApiResponse(
+                    responseCode = "500",
+                    description = "HTTP Status Internal Server Error",
+                    content = @Content(
+                            schema = @Schema(implementation = ErrorResponseDTO.class)
+                    )
+            )
+    })
+
+
+    @GetMapping("/contact-details")
+    public ResponseEntity<AccountsContactInfoDTO> getContactDetails(){
+        return ResponseEntity.status(HttpStatus.OK)
+                .body(accountsContactInfoDTO);
+    }
+
+
+
 }
+
