@@ -1,0 +1,10 @@
+build:
+  version: "3.0"
+
+accounts:
+  message: "Welcome to stack loans related local APIs"
+  contactDetails:
+    name: "Charlie charlie - Developer"
+    email: "charlie@gmail.com"
+  onCallSupport:
+    (+977)123456789

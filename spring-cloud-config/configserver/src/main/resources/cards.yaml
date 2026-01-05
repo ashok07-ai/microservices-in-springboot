@@ -1,0 +1,10 @@
+  build:
+    version: "3.0"
+
+  accounts:
+    message: "Welcome to stack cards related local APIs"
+    contactDetails:
+      name: "John Doe- Developer"
+      email: "sevenstack@gmail.com"
+    onCallSupport:
+      (+977)123456789

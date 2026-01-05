@@ -1,0 +1,10 @@
+build:
+  version: "2.0"
+
+accounts:
+  message: "Welcome to stack accounts related local QA APIs"
+  contactDetails:
+    name: "Alpha alpha- QA"
+    email: "alpha@gmail.com"
+  onCallSupport:
+    (+977)123456456

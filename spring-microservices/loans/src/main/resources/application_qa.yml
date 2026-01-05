@@ -1,0 +1,15 @@
+spring:
+  config:
+    activate:
+      on-profile: "prod"
+
+build:
+  version: "1.0"
+
+accounts:
+  message: "Welcome to stack loans related local PROD APIs"
+  contactDetails:
+    name: "Beta beta- Product Owner"
+    email: "beta@gmail.com"
+  onCallSupport:
+    (+977)1234564564
